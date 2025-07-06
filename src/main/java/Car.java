@@ -1,6 +1,6 @@
 public class Car {
-    String carName;
-    int raceCar;
+    final String carName; // final Это сделает поля неизменяемыми после инициализации.
+   final  int raceCar; // final Это сделает поля неизменяемыми после инициализации.
     public Car(String carName, int raceCar){
         this.carName = carName;
         this.raceCar = raceCar;
@@ -16,18 +16,16 @@ public class Car {
         return carName;
     }
 
-    // Метод для установки названия машины
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
-
     // Метод для получения скорости машины
     public int getRaceCar() {
         return raceCar;
     }
-
-    // Метод для установки скорости машины
-    public void setRaceCar(int raceCar) {
-        this.raceCar = raceCar;
-    }
+/*Пометка полей как final полезна по нескольким причинам:
+ 1. Безопасность данных: исключается возможность случайного
+ изменения состояния объекта после его создания.
+ 2. Чистота кода: делает намерения программиста более явными и
+ упрощает понимание кода другими разработчиками.
+ 3. Оптимизация: компилятору может быть проще оптимизировать
+ код, если он знает, что значения полей не изменятся.
+ */
 }
